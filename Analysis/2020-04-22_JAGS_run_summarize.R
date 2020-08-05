@@ -1,9 +1,9 @@
 
 # load packages and functions
-source("nocturnality_utility.R")
+source("./Analysis/nocturnality_utility.R")
 
 # load cleaned data set
-data_list <- readRDS("./Data/2019-03-26_data_list_8sp.rds")
+data_list <- readRDS("./Analysis/Data/2019-03-26_data_list_8sp.rds")
 
 
 # function to set up data and run JAGS model
@@ -133,14 +133,14 @@ saveRDS(jags_list, paste0(Sys.Date(),"_jags_model_ind_vars_list.rds"))
 ## Plotting
 
 # load in data from saved models
-model_list <- list(bobcat = readRDS("bobcat_model_run_ind_vars2020-04-22.rds"),
-                   coyote = readRDS("coyote_model_run_ind_vars2020-04-23.rds"),
-                   e_cottontail = readRDS("e_cottontail_model_run_ind_vars2020-04-24.rds"),
-                   racooon = readRDS("raccoon_model_run_ind_vars2020-05-02.rds"),
-                   red_fox = readRDS("red_fox_model_run_ind_vars2020-04-29.rds"),
-                   striped_skunk = readRDS("striped_skunk_model_run_ind_vars2020-04-29.rds"),
-                   v_opposum = readRDS("v_opossum_model_run_ind_vars2020-04-30.rds"),
-                   w_t_deer = readRDS("w_t_deer_model_run_ind_vars2020-05-01.rds"))
+model_list <- list(bobcat = readRDS("./Analysis/bobcat_model_run_ind_vars2020-04-22.rds"),
+                   coyote = readRDS("./Analysis/coyote_model_run_ind_vars2020-04-23.rds"),
+                   e_cottontail = readRDS("./Analysis/e_cottontail_model_run_ind_vars2020-04-24.rds"),
+                   racooon = readRDS("./Analysis/raccoon_model_run_ind_vars2020-05-02.rds"),
+                   red_fox = readRDS("./Analysis/red_fox_model_run_ind_vars2020-04-29.rds"),
+                   striped_skunk = readRDS("./Analysis/striped_skunk_model_run_ind_vars2020-04-29.rds"),
+                   v_opposum = readRDS("./Analysis/v_opossum_model_run_ind_vars2020-04-30.rds"),
+                   w_t_deer = readRDS("./Analysis/w_t_deer_model_run_ind_vars2020-05-01.rds"))
 
 # manually check convergence
 source("DBDA2E-utilities.R")
