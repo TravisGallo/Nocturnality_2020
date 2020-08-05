@@ -114,11 +114,18 @@ for(i in 1:length(slopes)){
   for(j in 1:4){
     rect(
       xleft = -2.5,
+<<<<<<< HEAD
       xright = 2,
       ybottom = which(my_y_names == "")[j] - 0.5,
       ytop = which(my_y_names == "")[j] + 0.5,
       col = "gray80",
       border = "black"
+=======
+      xright = 2.5,
+      ybottom = which(my_y_names == "")[j] - 0.5,
+      ytop = which(my_y_names == "")[j] + 0.5,
+      col = "gray80"
+>>>>>>> 14ad4426c2bf5ee8673c7029811addf1f2862f2f
     )
   }
   axis(2, at = c(1:24)[my_y_names != ""], labels = FALSE, tck = -0.0123)
