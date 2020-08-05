@@ -1,8 +1,8 @@
 #load packages and functions
-source("nocturnality_utility.R")
+source("./Analysis/nocturnality_utility.R")
 
 # load cleaned data set
-data_list <- readRDS("./Data/2019-03-26_data_list_8sp.rds")
+data_list <- readRDS("./Analysis/Data/2019-03-26_data_list_8sp.rds")
 
 # divide data up by city
 # raccoons are in all cities
@@ -82,7 +82,7 @@ var_mat[det_mat == 0] <- NA
 rr_mat[var_mat == Inf | var_mat == "NaN"] <- NA
 
 # find average housing density for each city
-sitecovs <- readRDS("2019-03-18_sitecovsBuffered.rds")
+sitecovs <- readRDS("./Analysis/Data/2019-03-18_sitecovsBuffered.rds")
 mean_urb <- sitecovs$buffer1000$sitecovs %>% 
   group_by(city) %>% 
   summarise(mean_urb = mean(urban_index)) %>% 
