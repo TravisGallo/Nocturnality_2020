@@ -4,7 +4,7 @@
 
 # **Authors**
 
-Travis Gallo^1^,^2^ , Mason Fidino^2^, Brian Gerber^3^, Adam A. Ahlers^4^, Julia L. Angstmann^5^, Max Amaya^6^, Amy L. Concilio^7^, David Drake^8^, Danielle Gray^9^, Elizabeth W. Lehrer^2^, Maureen H. Murray^2&, Travis J. Ryan^5^, Colleen Cassady St. Clair^10^, Carmen M. Salsbury^5^, Heather A. Sander^11^, Theodore Stankowich^6^, Jacque Williamson^12^, J. Amy Belaire^13^, Kelly Simon^14^, Seth B. Magle^2^
+Travis Gallo U+2081 , Mason Fidino^2^, Brian Gerber^3^, Adam A. Ahlers^4^, Julia L. Angstmann^5^, Max Amaya^6^, Amy L. Concilio^7^, David Drake^8^, Danielle Gray^9^, Elizabeth W. Lehrer^2^, Maureen H. Murray^2&, Travis J. Ryan^5^, Colleen Cassady St. Clair^10^, Carmen M. Salsbury^5^, Heather A. Sander^11^, Theodore Stankowich^6^, Jacque Williamson^12^, J. Amy Belaire^13^, Kelly Simon^14^, Seth B. Magle^2^
 
 1.  Environmental Science and Policy, College of Science, George Mason University, Fairfax, VA 22030 USA
 
