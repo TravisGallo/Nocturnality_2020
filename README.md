@@ -104,7 +104,6 @@ single species. This data is read into
 Each element in the list has 29 columns and varying rows. Only `city`, `ShortName`, `time_cat`, `avail_cat1`, `avail_cat2`, `avail_cat3`, `avail_cat4`, `avail_cat5` were used from this data set in the final analysis.
 
 | Column header | Data type | Description                                         |
-
 |---------------|-----------|-----------------------------------------------------|
 | city          | character | The name of the city where data was collected       |
 | ShortName     | character | The common name of the mammal species observed      | 
@@ -139,7 +138,6 @@ that we analyzed.
 `2021_Gallo_etal_DielActivity_cleaned_photo_dataset_9_species.rds` has 20 rows and 79,666 rows.
 
 | Column header | Data type | Description                                          |
-
 |---------------|-----------|------------------------------------------------------|
 | city          | character | The name of the city where data was collected        |
 | ShortName     | character | The common name of the mammal species observed       |
