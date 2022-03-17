@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # R script, JAGS models, and data used to assess how urbanization alters diel activity of mammals
 
 # Mammals adjust diel activity across gradients of urbanization
@@ -13,7 +7,7 @@ editor_options:
 Travis Gallo^1^,^2^, Mason Fidino^2^, Brian Gerber^3^, Adam A.
 Ahlers^4^, Julia L. Angstmann^5^, Max Amaya^6^, Amy L. Concilio^7^,
 David Drake^8^, Danielle Gray^9^, Elizabeth W. Lehrer^2^, Maureen H.
-Murray\^2&, Travis J. Ryan^5^, Colleen Cassady St. Clair^10^, Carmen M.
+Murray^2^, Travis J. Ryan^5^, Colleen Cassady St. Clair^10^, Carmen M.
 Salsbury^5^, Heather A. Sander^11^, Theodore Stankowich^6^, Jacque
 Williamson^12^, J. Amy Belaire^13^, Kelly Simon^14^, Seth B. Magle^2^
 
@@ -134,23 +128,48 @@ Each element in the list has 29 columns and varying rows. Only `city`, `ShortNam
 | urban_index   | numeric   | First principle component of pd, ndvi, imp          |
 | _scaled params| numeric   | Respective parameters scaled mean 0 sd 1            |
 
-
 **2021_Gallo_etal_DielActivity_sitecovsBuffered.rds** - These are site
 level covariates calculated at three scales - 500-m, 1000-m, and 1500-m
-buffers.
+buffers. These values are needed for plotting. Column headers match the above table.
 
-**2021_Gallo_etal_DielActivity_cleaned_photo_dataset_9\_species.rds** -
+**2021_Gallo_etal_DielActivity_cleaned_photo_dataset_9_species.rds** -
 A cleaned dataset of photo observations for only the species and cities
 that we analyzed.
 
+`2021_Gallo_etal_DielActivity_cleaned_photo_dataset_9_species.rds` has 20 rows and 79,666 rows.
+
+| Column header | Data type | Description                                          |
+
+|---------------|-----------|------------------------------------------------------|
+| city          | character | The name of the city where data was collected        |
+| ShortName     | character | The common name of the mammal species observed       |
+| ImageDate     | date      | The time stamp from camera photo                     |
+| time          | time      | The time of day of observation                       |
+| date          | date      | Date of the observation                              |
+| LocationName  | character | The unique cite name where observation was collected |
+| UTM_E         | numeric   | Easting coordinates                                  |
+| UTM_N         | numeric   | Northing coordinates                                 |
+| UTMZone       | character | The projection of respective observation location    |
+| dawn          | time      | The start of dawn for respective location and date   |
+| sunrise       | time      | The start of sunrise for respective location and date|
+| sunriseEnd    | time      | The start of sunrise for respective location and date|
+| dusk          | time      | The start of dusk for respective location and date   |
+| solarNoon     | time      | Solar noon for respective location and date          |
+| sunsetStart   | time      | The start of sunset for respective location and date |
+| sunset        | time      | The end of sunset for respective location and date   |
+| night         | time      | The start of night for respective location and date  |
+| nadir         | time      | The time when sun is at lowest point (darkest point) |
+| nightEnd      | time      | The end of night for respective location and date    |
+| time_cat      | numeric   | Time category for the respective observation         |
+
 **CityFiles/** - this folder contains the raw observation data for each
-city. Read in
+city. Column headers match the above tables with additional column names `StatusID`, `StudyAreaAbbr`, and `FileName` that were not used in this analysis. Read in
 `2021_Gallo_etal_DielActivity_photo_data_setup_10cities.R`.
 
 **group_mean_centered_variables.rds** - covariate values that are group
 mean centered by city and scaled by global standard deviation. These are
 separated from our original data, because the procedure was performed
-post-hoc to satisfy peer-review.
+post-hoc to satisfy peer-review. Column header names match `2021_Gallo_etal_DielActivity_data_list_8sp.rds`, however values were calculated from `2021_Gallo_etal_DielActivity_data_list_8sp.rds` by group mean centering the original variables by city and dividing by the respective variables global standard deviation.
 
 **Note:** All of these files must be within your working directory for
 the analysis to work. Several analysis were done in parallel. Therefore,
