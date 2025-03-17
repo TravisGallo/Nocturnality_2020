@@ -82,10 +82,10 @@ subfolder:
 **Scripts/DataProcessing/2021_Gallo_etal_DielActivity_CovariateSetup.R** -
 script used to calculate landscape covariates at species-specific
 scales. Note that this script requires several spatial datasets that are
-publicly avaliable, but we do not provide in this repository. Sources
+publicly available, but we do not provide in this repository. Sources
 are indicated in the script and/or the manuscript. This script produces
 `2021_Gallo_etal_DielActivity_data_list_8sp.rds` which is read in
-`021_Gallo_etal_DielActivity_fitJAGS.R`.
+`2021_Gallo_etal_DielActivity_fitJAGS.R`.
 
 **Scripts/DataProcessing/2021_Gallo_etal_DielActivity_photo_data_setup_10cities.R** -
 script used to clean and organize photo observations from 10 U.S.
